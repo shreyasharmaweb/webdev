@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(162, 162, 203);
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+           margin-top: 250px;
+           margin-left: 570px;
+        }
+      button{
+        background-color: rgb(76, 76, 103);
+        border-radius:30%;
+        width:100px;
+        height:50px;
+        color:azure;
+        margin:20px;
+        display:inline-block;
+        box-shadow:10px 10px rgb(34, 32, 32);
+      }
+    </style>
+    <script>
+        function A()
+        {
+             console.log("click");
+             document.write("click button");
+
+             var i=0;
+             var time=10000;
+             var photos=[];
+             photo[0]="sunset.jpg";
+             photo[1]="landscape.jpg";
+
+             function change()
+             {
+                document.slide.src=photos[i];
+
+                if(i<photos.length-1)
+                {
+                    i++;
+                }
+                else 
+                {
+                    i=0;
+                }
+                setTimeout("change()",time);
+             }
+             window.onload=change;
+        }
+        function B()
+        {
+            console.log("Mouse out");
+            document.write("working");
+        }
+        function C()
+        {
+            console.log("mouse in");
+            document.write("Moving mouse over button");
+        }
+    </script>
+</head>
+<body>
+    <h1>WORKING OF MOUSES</h1>
+    <div>
+        <button id="A" onclick="A()">Click</button>
+        <button id="B" onmouseout="B()">Mouse out</button>
+        <button id="C" onmouseover="C()">Mouse in</button>
+    </div>
+</body>
+</html>

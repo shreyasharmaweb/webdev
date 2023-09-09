@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:linear-gradient(rgb(213, 156, 166),rgb(157, 157, 207))
+        }
+        .box{
+            margin-top: 180px;
+            margin-left: 570px;
+            background-color: rgb(210, 171, 184);
+            height:500px;
+            width: 400px;
+            border-radius: 80px;
+            box-shadow: 10px 10px rgb(181, 142, 173);
+            border:2px solid ;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            padding-top:50px;
+        }
+        #place{
+            margin-left: 120px;
+            margin-top: 70px;
+            height:30px;
+            border-radius: 80px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #button{
+            margin-left:180px;
+            margin-top: 50px;
+            border-radius: 80px;
+            height:30px
+        }
+        #result{
+            margin-left: 80px;
+            margin-top:50px;
+            font-size: 50px;
+            border:10px 20px black;
+        }
+        button:hover{
+            cursor:pointer;
+            background-color: rgb(110, 149, 129);
+        }
+    </style>
+    <script>
+       function convert()
+       {
+        const cmvar=Number(document.getElementById("place").value);
+        const inch=(5/9)*(cmvar-32);
+        const result=document.getElementById("result");
+        result.innerHTML=inch.toFixed(3)+" "+"celsius";
+       }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h1>Fahrenheit to Celsius</h1>
+         <input id="place" type="text" placeholder="fahrenheit to celsius">
+         <br/>
+         <button id="button" type="submit" onclick="convert()">convert</button>
+         <div id="result">
+            
+         </div>
+    </div>
+</body>
+</html>

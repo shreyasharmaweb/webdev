@@ -1,0 +1,26 @@
+#one{
+    font-weight: 100px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#two{
+    font-style: italic;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.uni{
+    background-position:50%;
+    padding:20px;
+    box-shadow:5px 8px 50px;
+   
+}
+.mine{
+    font-family: 'Courier New', Courier, monospace;
+    text-align:center;
+    color:azure;
+    padding:10px;
+   
+}
+body{
+    background-image:url(./sunset.jpg);
+
+    
+}

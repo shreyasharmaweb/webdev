@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        p{
+            text-align: center;
+            font-size: 100px;
+        }
+        #pa{
+            height: 100px;
+            width: 150px;
+            
+            margin-top:100px;
+            margin-left: 500px;
+            padding-top: 40px;
+            padding-left: 60px;
+
+        }
+        #ra{
+            height: 50px;
+            margin-top: 15px;
+        }
+        #fn{
+            margin-top: 15px;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="pa">
+    <input type="button" value="click me" id="sh" onmouseover="this.style.background='pink'; this.style.color='white'"
+    onmouseout="this.style.background='purple';this.style.color='white'">
+    </br>
+    <input type="button" value="touch me" id="ra"  >
+</br>
+    <input type="button" value="for you" id="fn" onmouseover="callme()"
+    onmouseout="leftme()">
+</br>
+    <input type="button" value="remove" id="sa" onclick="fun()"/>
+    </div>
+    <p onmouseover=" this.style.color='purple'"
+    onmouseout="this.style.color='green'" >Hey! I am good😊</p>
+    <script>
+        document.getElementById("ra").onmouseover=changein;
+        document.getElementById("ra").onmouseout=changeout;
+
+         function changein()
+         {
+            this.style.background='purple';
+            this.style.color='yellow';
+         }
+         function changeout()
+         {
+            this.style.background='pink';
+            this.style.color='white';
+         }
+        
+         function callme()
+         {
+            var c = document.getElementById("fn");
+            c.style.background='grey';
+            c.style.color='yellow';
+         }
+         function leftme()
+         {
+            var a = document.getElementById("fn");
+            a.style.background='black';
+            a.style.color='grey';
+         }
+         function fun() {
+            var fn = document.getElementById("fn"); // Get the element with ID "fn"
+            fn.removeEventListener("mouseover", callme);
+            fn.removeEventListener("mouseout", leftme);
+        }
+    </script>
+</body>
+</html>

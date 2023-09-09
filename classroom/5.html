@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(226, 164, 176);
+        }
+        section{
+            border: 3px solid rgb(144, 57, 75);
+            display:inline-block;
+            padding:90px 20px 30px 30px;
+            text-align:center;
+            border-radius: 20px;
+            box-shadow:5px 5px 15px 5px black ;
+            align-self: center;
+            margin-top:10%;
+            margin-left:40%;
+            background-color: rgb(138, 138, 181);
+            height:200px;
+            font-weight: 100;
+            width: 200px;
+        }
+        #sh{
+            margin-top: 10px;
+            border: 3px solid black;
+            border-radius: 20px;
+            height:30px;
+        }
+        #pass{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding-left: 20px;
+            height:20px;
+        }
+        #name{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding-left: 20px;
+            height:20px;
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            margin:10px;
+            font-size: large;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        button:hover{
+            cursor:pointer;
+            background-color: rgb(155, 123, 193);
+        }
+    </style>
+    <script >
+      function  cal()
+        {
+            var a = document.getElementById("name");
+            var b = document.getElementById("pass");
+            if(name.value==="" || pass.value==="")
+            {
+                alert("please enter the value");
+                return false;
+            }
+            else if(pass.value.length<8)
+            {
+                alert("password should have atleast 8 characters");
+                return false;
+            }
+            else 
+            {
+                return true;
+            }
+        }
+        function shreya()
+        {
+            let msg ="its monday dear";
+            alert(msg);
+        }
+        shreya();
+        function sachin(name)
+        {
+           let msg = "hey!"+" "+name+" "+"how are you";
+           alert(msg);
+        }
+        var name = prompt("name?");
+        sachin(name);
+    </script>
+</head>
+<body>
+    <h1>ENTER YOUR DETAILS HERE 😊</h1>
+    <section>
+        <form action="./6.html">
+        <lable>NAME :</lable>
+    <input type="text"id="name" placeholder="username">
+    </br>
+    <lable>PASSWORD :</lable>
+    <input type="password" id="pass" placeholder="password">
+   </br>
+    <button onclick="return cal()" type="submit" id="sh" >LOGIN</button>
+    </section>
+</body>
+</html>
